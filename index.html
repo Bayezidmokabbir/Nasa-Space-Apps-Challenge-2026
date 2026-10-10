@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Junior Astronaut Mission Trainer | Team CyberCore</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="stars"></div>
+  <header class="topbar">
+    <a class="brand" href="#" data-page="home">
+      <span class="brand-icon">🚀</span>
+      <span><strong>JUNIOR ASTRONAUT</strong><small>MISSION TRAINER</small></span>
+    </a>
+    <nav>
+      <button class="nav-link active" data-page="home">Home</button>
+      <button class="nav-link" data-page="missions">Missions</button>
+      <button class="nav-link" data-page="learn">Learn</button>
+      <button class="nav-link" data-page="progress">My Progress</button>
+    </nav>
+    <div class="profile-chip"><span class="avatar">👩‍🚀</span><span>Explorer <b>01</b></span></div>
+  </header>
+
+  <main>
+    <section id="home" class="page active">
+      <div class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">YOUR SPACE ADVENTURE STARTS HERE</p>
+          <h1>Train like an astronaut.<br><span>Explore the universe.</span></h1>
+          <p class="lead">Complete missions, solve space puzzles, and discover the science behind rockets, planets, and Mars rovers.</p>
+          <div class="hero-actions">
+            <button class="btn primary" data-page="missions">Explore Missions <span>→</span></button>
+            <button class="btn secondary" data-page="learn">Start Learning</button>
+          </div>
+          <div class="mini-stats">
+            <div><strong>04</strong><span>Mission types</span></div>
+            <div><strong>10+</strong><span>Space facts</span></div>
+            <div><strong>∞</strong><span>Curiosity</span></div>
+          </div>
+        </div>
+        <div class="hero-art">
+          <div class="planet planet-blue"></div><div class="planet planet-red"></div>
+          <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+          <div class="astronaut">👨‍🚀</div><div class="floating-star star-a">✦</div><div class="floating-star star-b">✧</div>
+          <div class="hero-caption"><span class="pulse"></span> MISSION CONTROL ONLINE</div>
+        </div>
+      </div>
+      <div class="section-heading"><div><p class="eyebrow">READY FOR TAKEOFF?</p><h2>Featured missions</h2></div><button class="text-button" data-page="missions">View all missions →</button></div>
+      <div id="featuredMissions" class="mission-grid"></div>
+    </section>
+
+    <section id="missions" class="page">
+      <div class="page-heading"><p class="eyebrow">CHOOSE YOUR ADVENTURE</p><h1>Mission <span>Control</span></h1><p>Select a mission, follow the instructions, and earn your astronaut badge.</p></div>
+      <div id="allMissions" class="mission-grid"></div>
+      <div class="mission-workspace" id="missionWorkspace">
+        <div class="workspace-title"><div><p class="eyebrow">ACTIVE SIMULATION</p><h2 id="missionTitle">Rocket Launch</h2></div><span class="live-pill"><i></i> SIMULATION</span></div>
+        <div class="sim-layout">
+          <div class="sim-visual" id="simVisual">
+            <div class="sim-sky"></div><div class="sim-ground"></div><div class="sim-rocket">🚀</div>
+            <div class="countdown" id="simStatus">Ready for launch?</div>
+            <div class="sim-stars">✦　·　✧　　 ·　✦</div>
+          </div>
+          <div class="mission-instructions">
+            <h3>Mission checklist</h3>
+            <p id="missionDescription">Complete each step to launch your rocket safely.</p>
+            <div id="missionSteps" class="steps"></div>
+            <button class="btn primary full" id="nextStep">Start mission →</button>
+            <p class="hint" id="stepHint">Follow the checklist in order.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="learn" class="page">
+      <div class="page-heading"><p class="eyebrow">SMALL FACTS, BIG UNIVERSE</p><h1>Learn & <span>Explore</span></h1><p>Discover the science that makes space missions possible.</p></div>
+      <div class="learn-tabs">
+        <button class="learn-tab active" data-topic="planets">🪐 Planets</button>
+        <button class="learn-tab" data-topic="rockets">🚀 Rockets</button>
+        <button class="learn-tab" data-topic="rovers">🤖 Mars rovers</button>
+        <button class="learn-tab" data-topic="astronauts">👩‍🚀 Astronauts</button>
+      </div>
+      <div class="learn-card" id="learnCard"></div>
+      <div class="quiz-callout"><div><p class="eyebrow">TEST YOUR SPACE KNOWLEDGE</p><h2>Ready for a quick quiz?</h2><p>Answer a question and earn points for your progress.</p></div><button class="btn primary" data-quiz>Start Space Quiz →</button></div>
+      <div id="quizBox" class="quiz-box hidden"></div>
+    </section>
+
+    <section id="progress" class="page">
+      <div class="page-heading"><p class="eyebrow">YOUR JOURNEY SO FAR</p><h1>Explorer <span>Profile</span></h1><p>Every mission is a new step toward becoming a space explorer.</p></div>
+      <div class="progress-layout">
+        <div class="progress-card profile-card"><div class="big-avatar">👩‍🚀</div><h2>Explorer 01</h2><p>Junior Astronaut · Level <span id="level">1</span></p><div class="xp-track"><span id="xpFill"></span></div><small id="xpText">0 / 100 XP to next level</small><div class="profile-stats"><div><strong id="completedCount">0</strong><span>Missions completed</span></div><div><strong id="xpTotal">0</strong><span>XP earned</span></div></div></div>
+        <div class="progress-card"><p class="eyebrow">YOUR ACHIEVEMENTS</p><h2>Mission badges</h2><div class="badges" id="badges"></div></div>
+      </div>
+      <div class="progress-card history-card"><p class="eyebrow">KEEP EXPLORING</p><h2>Mission log</h2><div id="missionLog" class="mission-log">No missions completed yet. Choose a mission and start exploring!</div></div>
+    </section>
+  </main>
+
+  <footer><span>🚀 TEAM CYBERCORE</span><span>Inspiring the Next Generation of Space Explorers</span><span class="footer-note">Educational concept prototype</span></footer>
+  <div id="toast" class="toast" role="status"></div>
+  <script src="script.js"></script>
+</body>
+</html>
